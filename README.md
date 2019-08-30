@@ -7,6 +7,7 @@ Several studies have shown that correlated gene expression levels can be produce
 
 
 ```
+install.packages("devtools")
 library(devtools)
 install_github("junghyunJJ/ggmend")
 ```
