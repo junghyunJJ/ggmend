@@ -76,7 +76,7 @@ Discoverbgg <- function(S1, S2, G1, G2, maxperms, threads, seed){
 }
 #' GGmend (Gene-on-Gene effect estimator using Mendelian randomization)
 #'
-#' ggmend accurately identifies gene-on-gene regulatory effects utilizing a quartet of two genes and their two \emph{cis}-eQTLs}
+#' ggmend accurately identifies gene-on-gene regulatory effects utilizing a quartet of two genes and their two \emph{cis}-eQTLs
 #'
 #' @param ys A \emph{m} by \emph{n} matrix, where \emph{m} is the number of egenes, and \emph{n} is the number of individuals
 #' @param xs A \emph{m} by \emph{n} matrix, where \emph{m} is the number of \emph{cis}-acting snps, and \emph{n} is the number of individuals
@@ -95,7 +95,6 @@ Discoverbgg <- function(S1, S2, G1, G2, maxperms, threads, seed){
 #'               maxperms = 1000, threads = 1,seed = 1)
 #' netdata <- convertnet(res)
 #' plotnet(netdata$nodes, netdata$edges)
-
 ggmend <- function(ys, xs, effectth = 0, corth = 0, standardize = TRUE, maxperms = 1000, threads = 1, seed = 0){
 
   if(!require(pbapply)){

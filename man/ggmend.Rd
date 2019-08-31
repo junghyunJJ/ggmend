@@ -25,7 +25,7 @@ ggmend(ys, xs, effectth = 0, corth = 0, standardize = TRUE,
 \item{seed}{set.seed}
 }
 \description{
-GGmend (Gene-on-Gene effect estimator using Mendelian randomization)
+ggmend accurately identifies gene-on-gene regulatory effects utilizing a quartet of two genes and their two \emph{cis}-eQTLs
 }
 \examples{
 data(data_ggmend)
