@@ -83,4 +83,4 @@ str(netdata)
 plotnet(netdata$nodes, netdata$edges)
 # Loading required package: visNetwork
 ```
-
+http://rpubs.com/junghyunjj/523836
