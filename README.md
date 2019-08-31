@@ -79,3 +79,8 @@ str(netdata)
 ```
 
 #### 3. Plot network
+```
+plotnet(netdata$nodes, netdata$edges)
+# Loading required package: visNetwork
+```
+
