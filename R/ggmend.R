@@ -77,6 +77,7 @@ Discoverbgg <- function(S1, S2, G1, G2, maxperms, threads, seed){
 #' GGmend (Gene-on-Gene effect estimator using Mendelian randomization)
 #'
 #' ggmend accurately identifies gene-on-gene regulatory effects utilizing a quartet of two genes and their two \emph{cis}-eQTLs}
+#'
 #' @param ys A \emph{m} by \emph{n} matrix, where \emph{m} is the number of egenes, and \emph{n} is the number of individuals
 #' @param xs A \emph{m} by \emph{n} matrix, where \emph{m} is the number of \emph{cis}-acting snps, and \emph{n} is the number of individuals
 #' @param effectth effect size filtering threshold. default = 0
@@ -160,6 +161,7 @@ ggmend <- function(ys, xs, effectth = 0, corth = 0, standardize = TRUE, maxperms
 #' Convert data format for \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #'
 #' This function exports a network in edge and node list files in a format suitable for importing to \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
+#'
 #' @param res output ggmend
 #' @param fdrth Significant level of FDR. default = 0.05
 #' @examples
@@ -190,6 +192,7 @@ convertnet <- function(res, fdrth = 0.05){
 #' Network visualization for GGMend
 #'
 #' Network visualization using \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
+#'
 #' @param nodes See online documentation \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #' @param edges See online documentation \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #' @examples

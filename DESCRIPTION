@@ -1,7 +1,7 @@
 Package: ggmend
 Type: Package
 Title: GGmend (Gene-on-Gene effect estimator using Mendelian randomization)
-Version: 0.1.1
+Version: 1.0.0
 Author: Junghyun Jung
 Maintainer: Junghyun Jung <junghyunjj219@gmail.com>
 Description: GGmend that accurately identifies gene-on-gene regulatory effects 
