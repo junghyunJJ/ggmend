@@ -15,7 +15,7 @@ install_github("junghyunJJ/ggmend")
 
 ## Example
 
-#### load exmaple dataset in R.
+#### 1. Load exmaple dataset in R.
 ```
 library(ggmend)
 data(data_ggmend)
@@ -37,7 +37,7 @@ List of 2
 > - Parallelization (threads > 1) works only on *nix (Linux, Unix such as macOS) system. please check **.Platform$OS.type** function.
 
 
-#### run ggmend
+#### 2. Run ggmend
 ```
 res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
                effectth = 0, corth = 0, standardize = TRUE,
