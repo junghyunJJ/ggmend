@@ -51,7 +51,7 @@ res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
 
 ```
 
-
+#### 3. Convert data for visNetwork
 ```
 head(res)
 #   g1 g2 row col      Bs1g1      Bs2g2       GGcor      Bg1g2       Bg2g1        Bgg pval       FDR
@@ -61,4 +61,20 @@ head(res)
 # 4 G1 G4   1   4  0.6856368  0.5628240 -0.08399198 0.08409654 0.042935828 0.08409654 0.42 0.5383099
 # 5 G2 G4   2   4  0.4931179  0.5628240  0.25401625 0.12472683 0.122887443 0.12472683 0.47 0.5779730
 # 6 G3 G4   3   4 -0.5087897  0.5628240 -0.46654818 0.20976835 0.013751757 0.20976835 0.19 0.4433333
+```
+
+```
+netdata <- convertnet(res)
+# filtering < 0.05...
+# nodes: 13 / edges: 15
+
+str(netdata)
+# List of 2
+#  $ edges:'data.frame':	15 obs. of  3 variables:
+#   ..$ from: chr [1:15] "G1" "G6" "G3" "G8" ...
+#   ..$ to  : chr [1:15] "G2" "G7" "G10" "G10" ...
+#   ..$ Bgg : num [1:15] 0.397 0.453 0.567 0.503 0.461 ...
+#  $ nodes:'data.frame':	13 obs. of  2 variables:
+#   ..$ id   : Factor w/ 13 levels "G1","G10","G11",..: 1 2 3 4 5 6 7 8 9 10 ...
+#   ..$ label: Factor w/ 13 levels "G1","G10","G11",..: 1 2 3 4 5 6 7 8 9 10 ...
 ```
