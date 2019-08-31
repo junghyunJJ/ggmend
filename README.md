@@ -35,7 +35,6 @@ List of 2
 > **Note:**
 
 > - *ys* (egenes) and *xs* (cissnps) require the same dimension.
-
 > - Parallelization (threads > 1) works only on *nix (Linux, Unix such as macOS) system. please check **.Platform$OS.type** function.
 
 
