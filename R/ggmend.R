@@ -157,11 +157,9 @@ ggmend <- function(ys, xs, effectth = 0, corth = 0, standardize = TRUE, maxperms
 }
 
 
-#' Export network to Cytoscape
+#' Convert data format for \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #'
-#'This function exports a network in edge and node list files in a format suitable for importing to \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
-#'
-#'
+#' This function exports a network in edge and node list files in a format suitable for importing to \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #' @param res output ggmend
 #' @param fdrth Significant level of FDR. default = 0.05
 #' @examples
@@ -190,7 +188,8 @@ convertnet <- function(res, fdrth = 0.05){
 
 
 #' Network visualization for GGMend
-#'Network visualization using \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
+#'
+#' Network visualization using \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #' @param nodes See online documentation \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #' @param edges See online documentation \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 #' @examples

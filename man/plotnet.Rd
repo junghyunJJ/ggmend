@@ -2,8 +2,7 @@
 % Please edit documentation in R/ggmend.R
 \name{plotnet}
 \alias{plotnet}
-\title{Network visualization for GGMend
-Network visualization using \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}}
+\title{Network visualization for GGMend}
 \usage{
 plotnet(nodes, edges)
 }
@@ -13,7 +12,6 @@ plotnet(nodes, edges)
 \item{edges}{See online documentation \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}}
 }
 \description{
-Network visualization for GGMend
 Network visualization using \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}
 }
 \examples{

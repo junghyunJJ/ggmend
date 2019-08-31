@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggmend.R
 \name{convertnet}
 \alias{convertnet}
-\title{Export network to Cytoscape}
+\title{Convert data format for \href{https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html}{visNetwork}}
 \usage{
 convertnet(res, fdrth = 0.05)
 }
