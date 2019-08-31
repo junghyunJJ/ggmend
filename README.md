@@ -15,7 +15,7 @@ install_github("junghyunJJ/ggmend")
 
 ## Example
 load exmaple dataset
-```{r cars}
+```
 library(ggmend)
 data(data_ggmend)
 str(data_ggmend)
