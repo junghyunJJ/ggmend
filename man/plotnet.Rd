@@ -19,6 +19,6 @@ data(data_ggmend)
 res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
               effectth = 0, corth = 0, standardize = TRUE,
               maxperms = 1000, threads = 1,seed = 1)
-netdata <- convertnet(res)
+netdata <- convertnet(res, fdrth = 0.05)
 plotnet(netdata$nodes, netdata$edges)
 }

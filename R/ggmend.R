@@ -78,6 +78,8 @@ Discoverbgg <- function(S1, S2, G1, G2, maxperms, threads, seed){
 #'
 #' ggmend accurately identifies gene-on-gene regulatory effects utilizing a quartet of two genes and their two \emph{cis}-eQTLs
 #'
+#' \emph{ys} (egenes) and \emph{xs} (cissnps) require the same dimension. Parallelization (\emph{threads} > 1) works only on *nix (Linux, Unix such as macOS) system. please check \emph{.Platform$OS.type} function.
+#'
 #' @param ys A \emph{m} by \emph{n} matrix, where \emph{m} is the number of egenes, and \emph{n} is the number of individuals
 #' @param xs A \emph{m} by \emph{n} matrix, where \emph{m} is the number of \emph{cis}-acting snps, and \emph{n} is the number of individuals
 #' @param effectth effect size filtering threshold. default = 0
@@ -93,7 +95,7 @@ Discoverbgg <- function(S1, S2, G1, G2, maxperms, threads, seed){
 #' res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
 #'               effectth = 0, corth = 0, standardize = TRUE,
 #'               maxperms = 1000, threads = 1,seed = 1)
-#' netdata <- convertnet(res)
+#' netdata <- convertnet(res, fdrth = 0.05)
 #' plotnet(netdata$nodes, netdata$edges)
 ggmend <- function(ys, xs, effectth = 0, corth = 0, standardize = TRUE, maxperms = 1000, threads = 1, seed = 0){
 
@@ -168,7 +170,7 @@ ggmend <- function(ys, xs, effectth = 0, corth = 0, standardize = TRUE, maxperms
 #' res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
 #'               effectth = 0, corth = 0, standardize = TRUE,
 #'               maxperms = 1000, threads = 1,seed = 1)
-#' netdata <- convertnet(res)
+#' netdata <- convertnet(res, fdrth = 0.05)
 #' plotnet(netdata$nodes, netdata$edges)
 convertnet <- function(res, fdrth = 0.05){
   sig_res <- res[res$FDR < fdrth,]
@@ -199,7 +201,7 @@ convertnet <- function(res, fdrth = 0.05){
 #' res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
 #'               effectth = 0, corth = 0, standardize = TRUE,
 #'               maxperms = 1000, threads = 1,seed = 1)
-#' netdata <- convertnet(res)
+#' netdata <- convertnet(res, fdrth = 0.05)
 #' plotnet(netdata$nodes, netdata$edges)
 plotnet <- function(nodes, edges){
 
