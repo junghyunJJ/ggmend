@@ -17,9 +17,9 @@ install_github("junghyunJJ/ggmend")
 
 #### load exmaple dataset in R.
 ```
-> library(ggmend)
-> data(data_ggmend)
-> str(data_ggmend)
+library(ggmend)
+data(data_ggmend)
+str(data_ggmend)
 List of 2
  $ egenes : num [1:14, 1:100] 0.655 0.758 0.479 0.957 0.32 ...
   ..- attr(*, "dimnames")=List of 2
@@ -39,14 +39,14 @@ List of 2
 
 #### run ggmend
 ```
-> res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
-+               effectth = 0, corth = 0, standardize = TRUE,
-+               maxperms = 1000, threads = 1,seed = 1)
-Loading required package: pbapply
-n = 100 / m = 14
-Data filtering: |effectsize| > 0 and |correlation| > 0
-standardizing
-Number of snp/gene pair: 91
-  |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed = 04s
+res <- ggmend(data_ggmend$egenes, data_ggmend$cissnps,
+               effectth = 0, corth = 0, standardize = TRUE,
+               maxperms = 1000, threads = 1,seed = 1)
+# Loading required package: pbapply
+# n = 100 / m = 14
+# Data filtering: |effectsize| > 0 and |correlation| > 0
+# standardizing
+# Number of snp/gene pair: 91
+#   |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed = 04s
 
 ```
