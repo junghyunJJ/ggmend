@@ -62,9 +62,9 @@ head(res)
 # 5 G2 G4   2   4  0.4931179  0.5628240  0.25401625 0.12472683 0.122887443 0.12472683 0.47 0.5779730
 # 6 G3 G4   3   4 -0.5087897  0.5628240 -0.46654818 0.20976835 0.013751757 0.20976835 0.19 0.4433333
 ```
-
+filtering results using FDR < 0.05
 ```
-netdata <- convertnet(res)
+netdata <- convertnet(res, fdrth = 0.05)
 # filtering < 0.05...
 # nodes: 13 / edges: 15
 
@@ -78,3 +78,5 @@ str(netdata)
 #   ..$ id   : Factor w/ 13 levels "G1","G10","G11",..: 1 2 3 4 5 6 7 8 9 10 ...
 #   ..$ label: Factor w/ 13 levels "G1","G10","G11",..: 1 2 3 4 5 6 7 8 9 10 ...
 ```
+
+#### 3. Plot network
