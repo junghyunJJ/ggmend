@@ -83,4 +83,4 @@ str(netdata)
 plotnet(netdata$nodes, netdata$edges)
 # Loading required package: visNetwork
 ```
-![Imgur](http://rpubs.com/junghyunjj/523837)
+![Imgur](https://www.dropbox.com/s/n596t4jokg0ho3u/Rplot.png?dl=0)
