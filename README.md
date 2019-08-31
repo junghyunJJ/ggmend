@@ -1,5 +1,4 @@
-# ggmend
-GGmend: A Mendelian randomization method for finding gene-on-gene regulatory effects in the presence of unobserved confounders
+# GGmend: A Mendelian randomization method for finding gene-on-gene regulatory effects in the presence of unobserved confounders
 
 
 Abstract
